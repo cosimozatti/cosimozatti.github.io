@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=' js'</script>
 <style>
   :root{
     --paper:#EFEDE6;
@@ -112,7 +113,7 @@
   .about p:last-child{margin-bottom:0}
   .portrait-wrap{position:relative;margin-bottom:26px;border:1px solid var(--line);
     background:var(--paper);padding:9px;border-top:3px solid var(--petrol)}
-  .portrait{width:100%;display:block}
+  .portrait{width:100%;height:auto;display:block}
   .sidecard{border:1px solid var(--line);background:var(--paper-2);padding:26px 24px}
   .sidecard h3{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;
     color:var(--muted);margin-bottom:16px;font-weight:500}
@@ -166,6 +167,26 @@
   .langs li:last-child{border-bottom:none}
   .langs li b{font-family:var(--mono);font-weight:500;color:var(--petrol);font-size:.84rem}
 
+  /* ---------- leadership & training ---------- */
+  .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px}
+  @media(max-width:760px){.lead-grid{grid-template-columns:1fr;gap:38px}}
+  .lead-grid h3{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--petrol);
+    margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .role{margin-bottom:22px}
+  .role:last-child{margin-bottom:0}
+  .role .rtop{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+  .role h4{font-family:var(--serif);font-weight:500;font-size:1.12rem;line-height:1.25}
+  .role .yrs{font-family:var(--mono);font-size:.74rem;color:var(--muted);white-space:nowrap}
+  .role .org2{color:var(--petrol);font-weight:600;font-size:.92rem;margin:2px 0 6px}
+  .role p{font-size:.94rem;color:#3a4044;max-width:52ch}
+  .certs{list-style:none}
+  .certs li{padding:11px 0;border-bottom:1px solid var(--line)}
+  .certs li:last-child{border-bottom:none}
+  .certs .ct{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:.95rem}
+  .certs .ct b{font-weight:600}
+  .certs .ct span{font-family:var(--mono);font-size:.74rem;color:var(--muted);white-space:nowrap}
+  .certs .cw{font-size:.86rem;color:var(--muted);margin-top:2px}
+
   /* ---------- contact ---------- */
   .contact{background:var(--petrol-deep);color:var(--paper);border-top:none}
   .contact .eyebrow{color:var(--amber)}
@@ -183,10 +204,10 @@
     font-family:var(--mono);font-size:.74rem;letter-spacing:.04em}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
-  /* reveal */
+  /* reveal — gated on .js so the page is fully readable without JavaScript */
   @media(prefers-reduced-motion:no-preference){
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-    .reveal.in{opacity:1;transform:none}
+    .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    .js .reveal.in{opacity:1;transform:none}
   }
   :focus-visible{outline:2px solid var(--amber);outline-offset:3px}
 </style>
@@ -200,6 +221,7 @@
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#work">Work</a>
+      <a href="#leadership">Leadership</a>
       <a href="#methods">Methods</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -211,7 +233,7 @@
   <div class="wrap">
     <div class="loc">Rome · London &nbsp;/&nbsp; LSE × Sciences Po</div>
     <h1>Cosimo<br>Zatti</h1>
-    <p class="thesis">Economist and public-policy researcher working where <b>development finance</b>, <b>political economy</b> and <b>global health</b> meet.</p>
+    <p class="thesis">Economist and public-policy researcher. I turn messy evidence into decisions institutions can act on — across <b>development finance</b>, <b>political economy</b> and <b>global health</b>.</p>
     <div class="corridor" aria-hidden="true">
       <span class="node a"></span><span class="node b"></span><span class="node c"></span>
       <span class="label a">BOLOGNA</span>
@@ -227,9 +249,9 @@
     <div class="sec-head reveal"><span class="sec-num">01</span><h2>About</h2></div>
     <div class="about-grid">
       <div class="about reveal">
-        <p>I am an economist and public-policy researcher pursuing a dual Master's degree at the London School of Economics and Sciences Po, after graduating 110/110 cum laude from the University of Bologna in Economics, Politics and Social Sciences.</p>
-        <p>My work sits at the intersection of economics, political economy and political science, since I am convinced that policy questions cannot be answered by microeconomics or by politics alone. I am drawn to the political economy of good jobs, industrial strategy and state capacity, and increasingly to how public and multilateral finance turns into development outcomes on the ground.</p>
-        <p>In practice this means combining causal inference and stated-preference methods with institutional and qualitative analysis, whether I am screening loan portfolios against climate criteria, designing a discrete choice experiment, or cleaning a 19,000-respondent survey.</p>
+        <p>I am an economist and public-policy researcher on a dual Master's at the London School of Economics and Sciences Po, after graduating 110/110 <em>cum laude</em> from the University of Bologna in Economics, Politics and Social Sciences.</p>
+        <p>Most policy questions cannot be settled by microeconomics or by politics alone, so I work across both. What draws me is the political economy of good jobs, industrial strategy and state capacity — and, increasingly, the gap between what public and multilateral finance commits on paper and what it changes on the ground.</p>
+        <p>In practice that means owning a question end to end: framing it, building the dataset, choosing the method that will actually survive scrutiny, and writing the version a decision-maker reads. Recent work has meant screening a development bank's loan book against climate and gender criteria, designing a discrete choice experiment on health rationing, and turning a 19,067-respondent survey into findings I defended in front of senior EIB economists.</p>
       </div>
       <aside class="reveal">
         <div class="portrait-wrap">
@@ -262,10 +284,10 @@
         <h3>Junior Economist Intern</h3>
         <div class="org">FAO Investment Centre (CFI) — East &amp; Southern Africa Service</div>
         <ul>
-          <li>Drafting a CFI investment toolkit on value-chain competitiveness analysis along EU Global Gateway territorial corridors in Africa (Lobito, TAZARA and Nacala), published in the K4I.</li>
-          <li>Supporting the design of an EIB-funded Technical Assistance programme for the Somali Development and Reconstruction Bank, assessing lending practices, environmental and social risk management, and state capacity to absorb EIB credit lines for sustainable agribusiness.</li>
-          <li>Screening bank loan portfolios against EIB Climate Action and Environmental Sustainability (CAES) and Financing for Gender Equality criteria, identifying qualifying exposures and mapping capacity-building needs for allocation, monitoring and reporting.</li>
-          <li>Drafting the access-to-finance and gender-inclusion sections of the final Somalia report, with recommendations on smallholder financing, female borrower outreach and climate-resilient agronomic upgrading.</li>
+          <li>Authored the Investment Centre's toolkit for assessing value-chain competitiveness along three EU Global Gateway corridors — Lobito, TAZARA and Nacala — published in FAO's Knowledge for Investment series and written to be used by teams appraising agricultural investments.</li>
+          <li>Helped design an EIB-funded technical assistance programme for the Somali Development and Reconstruction Bank, testing whether its lending practices, environmental and social risk procedures and institutional capacity could absorb EIB credit lines for agribusiness.</li>
+          <li>Screened the bank's loan portfolio against EIB climate (CAES) and gender-finance criteria, identifying which exposures already qualified and which capacity gaps were blocking allocation, monitoring and reporting.</li>
+          <li>Wrote the access-to-finance and gender-inclusion chapters of the final Somalia report, recommending specific interventions on smallholder financing, female borrower outreach and climate-resilient upgrading.</li>
         </ul>
       </article>
 
@@ -274,10 +296,10 @@
         <h3>Research Intern</h3>
         <div class="org">Hospinnomics Chair, Paris School of Economics — ANR RESISTE</div>
         <ul>
-          <li>Conducted a methodological literature review on Discrete Choice Experiments in health preference elicitation: Lancaster-Rosen attribute utility, random utility models (MNL, mixed logit), D-efficiency and sample-size determination.</li>
-          <li>Reviewed the Atkinson (1970) social welfare function and approaches to estimating the inequality aversion parameter, from revealed fiscal preferences to direct survey and lottery elicitation.</li>
-          <li>Independently assessed French administrative microdata (ERFS, FiLoSoFi, DADS, INSEE Comptes nationaux) and drafted technical feasibility memos on coverage and variable availability for income distribution modelling.</li>
-          <li>Contributed to DCE survey design, supporting questionnaire development and attribute-level specification.</li>
+          <li>Ran the methodological review that set the design of the project's discrete choice experiment — which attributes to test, which models would hold, and how large a sample the results would need to be credible.</li>
+          <li>Built the methodological case for how the project measures a society's tolerance for health inequality, comparing what tax schedules reveal about that tolerance against what surveys and lottery experiments elicit directly.</li>
+          <li>Assessed four French administrative microdata sources (ERFS, FiLoSoFi, DADS, INSEE national accounts) on my own initiative and wrote the feasibility memos that determined which could actually support the project's income-distribution modelling.</li>
+          <li>Contributed to the survey instrument itself, from questionnaire development through attribute-level specification.</li>
         </ul>
       </article>
 
@@ -286,8 +308,8 @@
         <h3>Green Finance Challenge</h3>
         <div class="org">HSBC Continental Europe</div>
         <ul>
-          <li>Co-authored a benchmarking report on the EU Climate Tech ecosystem, assessing how industrial strategy and regulation (EU Green Deal, CSRD, Net Zero Industry Act) shape cross-border venture capital.</li>
-          <li>Evaluated EU financing schemes (InvestEU, Innovation Fund) and the role of the EIB and EIF in using blended finance to de-risk first-of-a-kind industrial projects.</li>
+          <li>Co-authored a benchmarking report on the EU climate-tech ecosystem, tracing how industrial strategy and regulation — the Green Deal, CSRD, the Net Zero Industry Act — decide where cross-border venture capital actually lands.</li>
+          <li>Assessed how InvestEU, the Innovation Fund and the EIB/EIF use blended finance to de-risk first-of-a-kind industrial projects, and where that machinery falls short.</li>
         </ul>
       </article>
 
@@ -296,8 +318,8 @@
         <h3>Climate Hackathon</h3>
         <div class="org">European Investment Bank (EIB)</div>
         <ul>
-          <li>Cleaned, harmonised and analysed 2023 EIB Climate Survey microdata (19,067 respondents across 27 EU Member States) in R.</li>
-          <li>Designed a dual econometric strategy (country-level OLS and individual-level weighted regression with country fixed effects) and presented findings to senior EIB experts; results published as a co-authored analytical report.</li>
+          <li>Cleaned, harmonised and analysed the 2023 EIB Climate Survey in R — 19,067 respondents across all 27 EU Member States — under hackathon time pressure.</li>
+          <li>Designed a dual identification strategy (country-level OLS alongside individual-level weighted regression with country fixed effects), defended the findings in front of senior EIB economists, and published them as a co-authored analytical report.</li>
         </ul>
       </article>
 
@@ -306,8 +328,8 @@
         <h3>Research Intern</h3>
         <div class="org">National Institute for Public Policy Analysis (INAPP)</div>
         <ul>
-          <li>Cleaned and analysed 500+ collective labour agreements to inform national reform on wage indexation and income protection, central to the political economy of job quality.</li>
-          <li>Researched inflation indexation mechanisms and contractual clauses; built reproducible workflows feeding into Rapporto INAPP 2024, Italy's flagship labour-market publication.</li>
+          <li>Analysed 500+ collective labour agreements to inform national reform on wage indexation and income protection — the concrete end of the good-jobs debate.</li>
+          <li>Built the reproducible workflows behind findings that fed <em>Rapporto INAPP 2024</em>, Italy's flagship annual publication on labour-market policy.</li>
         </ul>
       </article>
 
@@ -354,10 +376,85 @@
   </div>
 </section>
 
+<!-- LEADERSHIP & TRAINING -->
+<section id="leadership">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">04</span><h2>Leadership &amp; training</h2></div>
+    <div class="lead-grid">
+
+      <div class="reveal">
+        <h3>Leadership</h3>
+
+        <div class="role">
+          <div class="rtop">
+            <h4>Representative</h4>
+            <span class="yrs">2017 – 2025</span>
+          </div>
+          <div class="org2">CISV International (UNESCO-affiliated)</div>
+          <p>Over seven years with the organisation. Led a 40-member youth team from 2021 to 2022, coordinating programmes and campaigns across chapters.</p>
+        </div>
+
+        <div class="role">
+          <div class="rtop">
+            <h4>Delegate, policy forums</h4>
+          </div>
+          <div class="org2">EUI State of the Union (May 2024) · OECD World Forum on Well-being</div>
+          <p>Selected to represent at two international policy convenings — one on European governance, one on measuring what actually counts as progress.</p>
+        </div>
+
+        <div class="role">
+          <div class="rtop">
+            <h4>Volunteer</h4>
+            <span class="yrs">2023</span>
+          </div>
+          <div class="org2">European Solidarity Corps — Germany</div>
+          <p>Infrastructure restoration and digital resilience project.</p>
+        </div>
+
+        <div class="role">
+          <div class="rtop">
+            <h4>Student representative</h4>
+          </div>
+          <div class="org2">Association de l'École d'Affaires Publiques, Sciences Po</div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <h3>Specialised training</h3>
+        <ul class="certs">
+          <li>
+            <div class="ct"><b>Investment Project Formulation &amp; Management</b><span>FAO · 2026</span></div>
+            <div class="cw">Full project cycle for IFI-financed agricultural investment — identification through appraisal, financial and economic analysis, supervision. Aligned to FAO-EIB and FAO-World Bank operational practice.</div>
+          </li>
+          <li>
+            <div class="ct"><b>Partnerships with the EU: Agreement Templates</b><span>FAO · 2026</span></div>
+          </li>
+          <li>
+            <div class="ct"><b>Data for Public Policy and Social Choices</b><span>Bologna · 2025</span></div>
+            <div class="cw">Applied empirical microeconomics and causal inference (DiD, synthetic control, ML) for policy impact evaluation.</div>
+          </li>
+          <li>
+            <div class="ct"><b>Human Health and Climate Change</b><span>UN &amp; WHO · 2025</span></div>
+            <div class="cw">Specialised module on climate impacts for global health, and on evaluating mitigation and adaptation policy.</div>
+          </li>
+          <li>
+            <div class="ct"><b>InnovAction in Health Care</b><span>Sant'Anna Pisa · 2025</span></div>
+            <div class="cw">Strategy, performance and data management in health systems.</div>
+          </li>
+          <li>
+            <div class="ct"><b>EU climate policy &amp; digital business strategy</b><span>H-FARM · 2024</span></div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- METHODS -->
 <section id="methods">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">04</span><h2>Methods &amp; tools</h2></div>
+    <div class="sec-head reveal"><span class="sec-num">05</span><h2>Methods &amp; tools</h2></div>
     <div class="meth-grid">
       <div class="meth reveal">
         <h3>Research methods</h3>
@@ -385,9 +482,11 @@
           <span class="chip">Python · pandas</span>
           <span class="chip">LaTeX</span>
           <span class="chip">Excel</span>
-          <span class="chip">Claude Code</span>
+          <span class="chip">Microsoft Office</span>
+          <span class="chip">LLM-assisted analysis</span>
         </div>
         <p style="margin-top:18px">Data cleaning, statistical analysis, visualisation and reproducible analytical workflows.</p>
+        <p style="margin-top:12px"><b>Writing:</b> briefing notes, short-form analytical reports, literature reviews and feasibility memos.</p>
       </div>
       <div class="meth reveal">
         <h3>Languages</h3>
