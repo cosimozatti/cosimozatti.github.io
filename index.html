@@ -3,528 +3,434 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cosimo Zatti — Economist & Public-Policy Researcher</title>
-<meta name="description" content="Cosimo Zatti — economist and public-policy researcher working across development finance, political economy and global health. LSE/Sciences Po.">
+<title>Cosimo Zatti, economist</title>
+<meta name="description" content="Cosimo Zatti, economist working on development finance and public policy. Dual master's at LSE and Sciences Po; FAO Investment Centre; LSE capstone with Manufacturing Africa (FCDO).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script>document.documentElement.className+=' js'</script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#EFEDE6;
-    --paper-2:#E7E4DB;
-    --ink:#1C2327;
-    --petrol:#15424B;
-    --petrol-deep:#0E2E34;
-    --amber:#B5763A;
-    --muted:#6B7176;
-    --line:#CFCBC0;
-    --serif:'Fraunces',Georgia,serif;
-    --sans:'IBM Plex Sans',system-ui,sans-serif;
-    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --paper:#F6F7F5;
+    --panel:#ECEFF0;
+    --ink:#16202A;
+    --body:#2B3540;
+    --muted:#5A6470;
+    --rule:#D6DCE1;
+    --navy:#1F3A68;
+    --navy-soft:#DCE3EE;
+    --sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --serif:'Source Serif 4',Georgia,serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--sans);
-    font-size:17px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  a{color:inherit}
-  ::selection{background:var(--amber);color:var(--paper)}
+  html{scroll-behavior:smooth;scroll-padding-top:76px}
+  body{background:var(--paper);color:var(--body);font-family:var(--serif);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:hover{text-decoration-thickness:2px}
+  :focus-visible{outline:2px solid var(--navy);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+  @media(max-width:640px){.wrap{padding:0 18px}body{font-size:17px}}
 
-  .wrap{max-width:1060px;margin:0 auto;padding:0 28px}
+  /* header */
+  header.bar{position:sticky;top:0;z-index:20;background:rgba(246,247,245,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:20px}
+  .brand{font-family:var(--sans);font-weight:700;font-size:1.02rem;color:var(--ink);text-decoration:none;letter-spacing:-.005em}
+  nav.top{display:flex;align-items:center;gap:24px;font-family:var(--sans);font-size:.9rem}
+  nav.top a{color:var(--muted);text-decoration:none}
+  nav.top a:hover{color:var(--ink)}
+  nav.top a.cv{color:#fff;background:var(--navy);padding:7px 14px;border-radius:3px;font-weight:600}
+  nav.top a.cv:hover{background:var(--ink)}
+  @media(max-width:820px){nav.top a:not(.cv){display:none}}
 
-  /* ---------- utility / labels ---------- */
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:.72rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--amber);
-    display:inline-block;
-  }
-  .mono{font-family:var(--mono)}
+  /* hero */
+  .hero{padding:72px 0 0}
+  .hero-grid{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:end}
+  @media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:32px}.hero-photo{max-width:260px;order:-1}}
+  .hero h1{font-family:var(--sans);font-weight:700;color:var(--ink);font-size:clamp(2.6rem,6.4vw,4.4rem);line-height:1.02;letter-spacing:-.025em}
+  .hero .role{font-family:var(--sans);font-size:clamp(1.12rem,2.2vw,1.36rem);font-weight:500;color:var(--ink);margin-top:18px;max-width:30ch;line-height:1.35}
+  .hero .now{margin-top:18px;max-width:52ch;color:var(--body)}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;font-family:var(--sans);font-size:.95rem}
+  .btn{display:inline-block;padding:10px 18px;border-radius:3px;text-decoration:none;font-weight:600}
+  .btn.solid{background:var(--navy);color:#fff}
+  .btn.solid:hover{background:var(--ink)}
+  .btn.ghost{border:1px solid var(--rule);color:var(--ink);background:#fff}
+  .btn.ghost:hover{border-color:var(--navy)}
+  .hero-photo img{width:100%;height:auto;display:block;border-radius:4px;aspect-ratio:620/576;object-fit:cover}
 
-  /* ---------- top bar ---------- */
-  header.bar{
-    position:sticky;top:0;z-index:50;
-    background:rgba(239,237,230,.86);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .bar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
-  .brand{font-family:var(--serif);font-weight:600;font-size:1.12rem;letter-spacing:.01em}
-  nav.top a{
-    font-family:var(--mono);font-size:.78rem;letter-spacing:.05em;
-    text-decoration:none;color:var(--muted);margin-left:26px;
-    padding-bottom:3px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;
-  }
-  nav.top a:hover{color:var(--ink);border-color:var(--amber)}
-  @media(max-width:680px){nav.top{display:none}}
-
-  /* ---------- hero ---------- */
-  .hero{padding:104px 0 76px;position:relative}
-  .hero .loc{font-family:var(--mono);font-size:.8rem;color:var(--muted);letter-spacing:.04em;margin-bottom:26px}
-  .hero h1{
-    font-family:var(--serif);
-    font-weight:500;
-    font-size:clamp(3rem,9vw,6.4rem);
-    line-height:.96;
-    letter-spacing:-.01em;
-    margin-bottom:28px;
-  }
-  .hero h1 em{font-style:italic;color:var(--petrol)}
-  .hero .thesis{
-    max-width:44ch;font-size:1.22rem;line-height:1.5;color:var(--ink);
-  }
-  .hero .thesis b{color:var(--petrol);font-weight:600}
-  /* corridor line signature */
-  .corridor{margin:54px 0 0;position:relative;height:2px;background:var(--line)}
-  .corridor::before{content:"";position:absolute;left:0;top:0;height:2px;width:100%;
-    background:linear-gradient(90deg,var(--petrol) 0 62%,var(--amber) 62% 100%);
-    transform-origin:left;animation:draw 1.4s cubic-bezier(.2,.7,.2,1) .2s both}
-  .corridor .node{position:absolute;top:50%;width:11px;height:11px;border-radius:50%;
-    background:var(--paper);border:2px solid var(--petrol);transform:translate(-50%,-50%)}
-  .corridor .node.a{left:0}
-  .corridor .node.b{left:31%}
-  .corridor .node.c{left:62%;border-color:var(--amber)}
-  .corridor .label{position:absolute;top:18px;font-family:var(--mono);font-size:.68rem;
-    letter-spacing:.08em;color:var(--muted);transform:translateX(-50%)}
-  .corridor .label.a{left:0;transform:none}
-  .corridor .label.b{left:31%}
-  .corridor .label.c{left:62%;color:var(--amber)}
-  @keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-
-  /* ---------- generic section ---------- */
-  section{padding:74px 0;border-top:1px solid var(--line)}
-  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:40px;flex-wrap:wrap}
-  .sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.01em}
-  .sec-num{font-family:var(--mono);font-size:.78rem;color:var(--amber);letter-spacing:.1em}
-
-  /* ---------- about ---------- */
-  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:54px}
-  @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:34px}}
-  .about p{font-size:1.12rem;margin-bottom:18px;max-width:58ch}
-  .about p:last-child{margin-bottom:0}
-  .portrait-wrap{position:relative;margin-bottom:26px;border:1px solid var(--line);
-    background:var(--paper);padding:9px;border-top:3px solid var(--petrol)}
-  .portrait{width:100%;height:auto;display:block}
-  .sidecard{border:1px solid var(--line);background:var(--paper-2);padding:26px 24px}
-  .sidecard h3{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;
-    color:var(--muted);margin-bottom:16px;font-weight:500}
-  .sidecard ul{list-style:none}
-  .sidecard li{display:flex;justify-content:space-between;gap:14px;padding:9px 0;
-    border-bottom:1px solid var(--line);font-size:.92rem}
-  .sidecard li:last-child{border-bottom:none}
-  .sidecard li span:last-child{font-family:var(--mono);font-size:.82rem;color:var(--petrol);text-align:right}
-
-  /* ---------- experience timeline ---------- */
-  .tl{position:relative;padding-left:34px}
-  .tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line)}
-  .job{position:relative;padding:0 0 40px}
-  .job:last-child{padding-bottom:0}
-  .job::before{content:"";position:absolute;left:-34px;top:7px;width:12px;height:12px;border-radius:50%;
-    background:var(--paper);border:2px solid var(--petrol)}
-  .job.now::before{background:var(--amber);border-color:var(--amber);box-shadow:0 0 0 4px rgba(181,118,58,.18)}
-  .job .when{font-family:var(--mono);font-size:.76rem;letter-spacing:.04em;color:var(--muted);margin-bottom:5px}
-  .job h3{font-family:var(--serif);font-weight:500;font-size:1.32rem;line-height:1.2}
-  .job .org{color:var(--petrol);font-weight:600;font-family:var(--sans);font-size:1rem;margin:3px 0 12px}
-  .job ul{list-style:none;max-width:64ch}
-  .job li{position:relative;padding-left:18px;margin-bottom:8px;font-size:.98rem;color:#33393d}
-  .job li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;background:var(--amber);border-radius:1px}
-
-  /* ---------- work / publications ---------- */
-  .works{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-  @media(max-width:760px){.works{grid-template-columns:1fr}}
-  .card{border:1px solid var(--line);background:var(--paper-2);padding:28px 26px;display:flex;flex-direction:column;
-    transition:transform .25s,border-color .25s}
-  .card:hover{transform:translateY(-3px);border-color:var(--petrol)}
-  .card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
-  .card .tag.pub{color:var(--petrol)}
-  .card h3{font-family:var(--serif);font-weight:500;font-size:1.28rem;line-height:1.22;margin-bottom:12px}
-  .card p{font-size:.95rem;color:#3a4044;margin-bottom:16px}
-  .card .meta{margin-top:auto;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
-  .card a.read{display:inline-flex;align-items:center;gap:6px;margin-top:14px;text-decoration:none;
-    font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--petrol);
-    border-bottom:1px solid var(--amber);padding-bottom:2px;align-self:flex-start;transition:gap .2s,color .2s}
-  .card a.read:hover{gap:10px;color:var(--amber)}
-
-  /* ---------- methods ---------- */
-  .meth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-  @media(max-width:760px){.meth-grid{grid-template-columns:1fr;gap:30px}}
-  .meth h3{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--petrol);
-    margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-  .chips{display:flex;flex-wrap:wrap;gap:8px}
-  .chip{font-size:.85rem;border:1px solid var(--line);background:var(--paper);padding:5px 11px;border-radius:2px;color:#33393d}
-  .meth p{font-size:.95rem;color:#3a4044}
-  .langs{list-style:none}
-  .langs li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--line);font-size:.92rem}
-  .langs li:last-child{border-bottom:none}
-  .langs li b{font-family:var(--mono);font-weight:500;color:var(--petrol);font-size:.84rem}
-
-  /* ---------- leadership & training ---------- */
-  .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px}
-  @media(max-width:760px){.lead-grid{grid-template-columns:1fr;gap:38px}}
-  .lead-grid h3{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--petrol);
-    margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-  .role{margin-bottom:22px}
-  .role:last-child{margin-bottom:0}
-  .role .rtop{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
-  .role h4{font-family:var(--serif);font-weight:500;font-size:1.12rem;line-height:1.25}
-  .role .yrs{font-family:var(--mono);font-size:.74rem;color:var(--muted);white-space:nowrap}
-  .role .org2{color:var(--petrol);font-weight:600;font-size:.92rem;margin:2px 0 6px}
-  .role p{font-size:.94rem;color:#3a4044;max-width:52ch}
-  .certs{list-style:none}
-  .certs li{padding:11px 0;border-bottom:1px solid var(--line)}
-  .certs li:last-child{border-bottom:none}
-  .certs .ct{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:.95rem}
-  .certs .ct b{font-weight:600}
-  .certs .ct span{font-family:var(--mono);font-size:.74rem;color:var(--muted);white-space:nowrap}
-  .certs .cw{font-size:.86rem;color:var(--muted);margin-top:2px}
-
-  /* ---------- contact ---------- */
-  .contact{background:var(--petrol-deep);color:var(--paper);border-top:none}
-  .contact .eyebrow{color:var(--amber)}
-  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,6vw,3.4rem);line-height:1.05;
-    margin:18px 0 30px;max-width:18ch}
-  .contact h2 em{font-style:italic;color:var(--amber)}
-  .clinks{display:flex;flex-wrap:wrap;gap:14px}
-  .clink{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--paper);
-    border:1px solid rgba(239,237,230,.28);padding:13px 20px;font-family:var(--mono);font-size:.86rem;letter-spacing:.03em;
-    transition:background .2s,border-color .2s}
-  .clink:hover{background:rgba(239,237,230,.08);border-color:var(--amber)}
-  .clink .dot{width:7px;height:7px;border-radius:50%;background:var(--amber)}
-
-  footer{background:var(--petrol-deep);color:rgba(239,237,230,.55);padding:26px 0 40px;
-    font-family:var(--mono);font-size:.74rem;letter-spacing:.04em}
-  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-
-  /* reveal — gated on .js so the page is fully readable without JavaScript */
+  /* route line: the one signature element */
+  .route{margin:64px 0 0;padding:0 0 56px;border-bottom:1px solid var(--rule)}
+  .route ol{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);position:relative;font-family:var(--sans)}
+  .route ol::before{content:"";position:absolute;left:7px;right:7px;top:7px;height:3px;background:var(--navy);transform-origin:left center}
+  .route li{position:relative;padding-top:30px;padding-right:12px}
+  .route li::before{content:"";position:absolute;left:0;top:0;width:17px;height:17px;border-radius:50%;background:var(--paper);border:3px solid var(--navy);box-sizing:border-box}
+  .route li.here::before{background:var(--navy)}
+  .route .yr{display:block;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+  .route .city{display:block;font-weight:700;color:var(--ink);font-size:1.02rem;margin-top:2px}
+  .route .what{display:block;font-size:.86rem;color:var(--muted);line-height:1.4;margin-top:4px}
   @media(prefers-reduced-motion:no-preference){
-    .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-    .js .reveal.in{opacity:1;transform:none}
+    .route ol::before{animation:draw 1.6s cubic-bezier(.3,.7,.2,1) .3s both}
+    @keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
   }
-  :focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+  @media(max-width:760px){
+    .route ol{grid-template-columns:1fr;gap:18px}
+    .route ol::before{left:7px;right:auto;top:8px;bottom:8px;width:3px;height:auto;transform-origin:center top}
+    .route li{padding:0 0 0 34px}
+    @media(prefers-reduced-motion:no-preference){.route ol::before{animation-name:drawv}@keyframes drawv{from{transform:scaleY(0)}to{transform:scaleY(1)}}}
+  }
+
+  /* sections */
+  section{padding:64px 0;border-bottom:1px solid var(--rule)}
+  section:last-of-type{border-bottom:none}
+  h2{font-family:var(--sans);font-weight:700;color:var(--ink);font-size:1.6rem;letter-spacing:-.01em;margin-bottom:28px}
+  h3{font-family:var(--sans);font-weight:600;color:var(--ink);font-size:1.1rem;line-height:1.35}
+  .prose p{max-width:68ch;margin-bottom:16px}
+  .prose p:last-child{margin-bottom:0}
+
+  .competencies{margin-top:34px;padding:24px 26px;background:var(--panel);border-radius:4px}
+  .competencies h3{margin-bottom:14px}
+  .competencies ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 32px;font-family:var(--sans);font-size:.95rem;color:var(--body)}
+  .competencies li{padding-left:16px;position:relative;line-height:1.45}
+  .competencies li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--navy)}
+  @media(max-width:640px){.competencies ul{grid-template-columns:1fr}}
+
+  /* entries: experience and education share one grid */
+  .entry{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:26px 0;border-top:1px solid var(--rule)}
+  .entry:first-of-type{border-top:none;padding-top:0}
+  .entry .when{font-family:var(--sans);font-size:.88rem;color:var(--muted);line-height:1.5;font-variant-numeric:tabular-nums}
+  .entry .when b{display:block;color:var(--ink);font-weight:600}
+  .entry .org{font-family:var(--sans);color:var(--navy);font-weight:600;font-size:.98rem;margin-top:2px}
+  .entry .sub{font-size:.95rem;color:var(--muted);font-style:italic;margin-top:2px}
+  .entry ul{margin:12px 0 0 0;padding-left:18px;max-width:70ch}
+  .entry li{margin-bottom:8px}
+  .entry li::marker{color:var(--navy)}
+  .entry .links{margin-top:10px;font-family:var(--sans);font-size:.92rem;display:flex;flex-wrap:wrap;gap:6px 20px}
+  .badge{display:inline-block;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--navy);background:var(--navy-soft);padding:2px 8px;border-radius:3px;margin-left:8px;vertical-align:2px}
+  @media(max-width:700px){.entry{grid-template-columns:1fr;gap:6px}}
+
+  /* reports */
+  .reports{list-style:none}
+  .reports li{padding:22px 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:8px 28px;align-items:start}
+  .reports li:first-child{border-top:none;padding-top:0}
+  .reports h3{font-family:var(--serif);font-weight:600;font-size:1.14rem;line-height:1.4;max-width:62ch}
+  .reports .by{font-size:.95rem;color:var(--muted);margin-top:4px}
+  .reports .status{font-family:var(--sans);font-size:.85rem;color:var(--muted);white-space:nowrap;text-align:right}
+  .reports .links{grid-column:1 / -1;font-family:var(--sans);font-size:.92rem;display:flex;flex-wrap:wrap;gap:6px 20px}
+  @media(max-width:640px){.reports li{grid-template-columns:1fr}.reports .status{text-align:left}}
+
+  /* two-column lists */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px 56px}
+  @media(max-width:760px){.cols{grid-template-columns:1fr}}
+  .cols h3{margin-bottom:12px}
+  .plain{list-style:none}
+  .plain li{padding:9px 0;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:16px}
+  .plain li:first-child{border-top:none;padding-top:0}
+  .plain li span:last-child{font-family:var(--sans);font-size:.9rem;color:var(--muted);text-align:right;white-space:nowrap}
+  .note{font-size:.95rem;color:var(--muted);margin-top:12px;max-width:60ch}
+
+  /* contact */
+  .contact{background:var(--ink);color:#E9EDF1;border-bottom:none}
+  .contact h2{color:#fff}
+  .contact p{max-width:58ch;margin-bottom:24px}
+  .contact .actions{margin-top:0}
+  .contact .btn.solid{background:#fff;color:var(--ink)}
+  .contact .btn.solid:hover{background:var(--navy-soft)}
+  .contact .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+  .contact .btn.ghost:hover{border-color:#fff}
+  .contact :focus-visible{outline-color:#fff}
+  footer{background:var(--ink);color:#9AA6B2;font-family:var(--sans);font-size:.82rem;padding:0 0 36px}
 </style>
 </head>
 <body>
 
 <header class="bar">
   <div class="wrap">
-    <span class="brand">Cosimo Zatti</span>
-    <nav class="top">
-      <a href="#about">About</a>
+    <a class="brand" href="#top">Cosimo Zatti</a>
+    <nav class="top" aria-label="Sections">
+      <a href="#profile">Profile</a>
       <a href="#experience">Experience</a>
-      <a href="#work">Work</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#methods">Methods</a>
+      <a href="#reports">Reports</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
+      <a class="cv" href="CV-Cosimo-Zatti.pdf" target="_blank" rel="noopener">CV (PDF)</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
+<main id="top">
 <div class="hero">
   <div class="wrap">
-    <div class="loc">Rome · London &nbsp;/&nbsp; LSE × Sciences Po</div>
-    <h1>Cosimo<br>Zatti</h1>
-    <p class="thesis">Economist and public-policy researcher. I turn messy evidence into decisions institutions can act on — across <b>development finance</b>, <b>political economy</b> and <b>global health</b>.</p>
-    <div class="corridor" aria-hidden="true">
-      <span class="node a"></span><span class="node b"></span><span class="node c"></span>
-      <span class="label a">BOLOGNA</span>
-      <span class="label b">PARIS · LSE</span>
-      <span class="label c">FAO · ROME</span>
+    <div class="hero-grid">
+      <div>
+        <h1>Cosimo Zatti</h1>
+        <p class="role">Economist working on development finance and public policy</p>
+        <p class="now">Completing a dual master's at the London School of Economics and Sciences Po (July 2027). Currently a capstone consultant to Manufacturing Africa, a programme of the UK Foreign, Commonwealth and Development Office, after an internship at the FAO Investment Centre in Rome.</p>
+        <div class="actions">
+          <a class="btn solid" href="CV-Cosimo-Zatti.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="btn ghost" href="mailto:cosimo.zatti@gmail.com">Email me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/cosimo-zatti-102ba32b3/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="cosimo.jpg" alt="Portrait of Cosimo Zatti" width="620" height="576">
+      </div>
+    </div>
+
+    <div class="route" aria-label="Where I have studied and worked">
+      <ol>
+        <li><span class="yr">2022</span><span class="city">Bologna</span><span class="what">BSc in Economics, Politics and Social Sciences</span></li>
+        <li><span class="yr">2024</span><span class="city">Rome</span><span class="what">INAPP, labour market policy research</span></li>
+        <li><span class="yr">2025</span><span class="city">Paris</span><span class="what">Sciences Po, Paris School of Economics, EIB hackathon</span></li>
+        <li><span class="yr">2026</span><span class="city">Rome</span><span class="what">FAO Investment Centre</span></li>
+        <li class="here"><span class="yr">2026–27</span><span class="city">London</span><span class="what">LSE, capstone with Manufacturing Africa</span></li>
+      </ol>
     </div>
   </div>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
+<section id="profile">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">01</span><h2>About</h2></div>
-    <div class="about-grid">
-      <div class="about reveal">
-        <p>I am an economist and public-policy researcher on a dual Master's at the London School of Economics and Sciences Po, after graduating 110/110 <em>cum laude</em> from the University of Bologna in Economics, Politics and Social Sciences.</p>
-        <p>Most policy questions cannot be settled by microeconomics or by politics alone, so I work across both. What draws me is the political economy of good jobs, industrial strategy and state capacity — and, increasingly, the gap between what public and multilateral finance commits on paper and what it changes on the ground.</p>
-        <p>In practice that means owning a question end to end: framing it, building the dataset, choosing the method that will actually survive scrutiny, and writing the version a decision-maker reads. Recent work has meant screening a development bank's loan book against climate and gender criteria, designing a discrete choice experiment on health rationing, and turning a 19,067-respondent survey into findings I defended in front of senior EIB economists.</p>
-      </div>
-      <aside class="reveal">
-        <div class="portrait-wrap">
-          <img class="portrait" src="cosimo.jpg" alt="Cosimo Zatti" width="620" height="576">
-        </div>
-        <div class="sidecard">
-          <h3>At a glance</h3>
-          <ul>
-            <li><span>Based in</span><span>Rome / London</span></li>
-            <li><span>Studying</span><span>MPA · MPP</span></li>
-            <li><span>BSc</span><span>110/110 cum laude</span></li>
-            <li><span>Focus</span><span>Dev. finance · health</span></li>
-            <li><span>Stack</span><span>R · Stata · Python</span></li>
-            <li><span>Languages</span><span>IT · EN · FR · ES</span></li>
-          </ul>
-        </div>
-      </aside>
+    <h2>Profile</h2>
+    <div class="prose">
+      <p>Economist completing a dual master's at the London School of Economics (MPA in Economic Policy) and Sciences Po (Master in Public Policy). At the FAO Investment Centre I worked on the EIB-FAO Partnership and the EU Global Gateway, assessing a Somali public development bank ahead of an EIB credit line and screening agrifood investments along the Lobito Corridor. My LSE capstone with Manufacturing Africa maps where development finance institutions put their money in six African markets and where manufacturing firms are left without it. This work rests on applied research in health and labour economics, and on a co-authored analytical report published by the European Investment Bank.</p>
+      <p>I work between disciplines. My degree in Bologna taught me that microeconomics alone rarely settles a policy question, and politics alone does not either; questions of jobs and health need institutions that pool finance across borders, and evidence that others can check. I combine causal inference and stated-preference methods with institutional analysis, and I say plainly what the data cannot show. Eight years with CISV International, running intercultural programmes for young people, taught me to work in mixed teams and, from 2021, to lead one.</p>
+    </div>
+    <div class="competencies">
+      <h3>Core competencies</h3>
+      <ul>
+        <li>Development finance and investment screening</li>
+        <li>Technical assistance design for financial intermediaries</li>
+        <li>Climate and gender finance eligibility (EIB criteria)</li>
+        <li>Auditing and analysing DFI transaction data</li>
+        <li>Econometrics and causal inference (DiD, RDD, synthetic control, IV)</li>
+        <li>Discrete choice experiments and stated preferences</li>
+        <li>Policy writing: briefing notes, terms of reference, feasibility memos</li>
+        <li>Python, R, Stata, SQL and Excel</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">02</span><h2>Experience</h2></div>
-    <div class="tl">
+    <h2>Experience</h2>
 
-      <article class="job now reveal">
-        <div class="when">May – Nov 2026 · Rome</div>
+    <div class="entry">
+      <div class="when"><b>Oct 2026 – Mar 2027</b>London</div>
+      <div>
+        <h3>Capstone consultant, LSE MPA<span class="badge">Current</span></h3>
+        <div class="org">Manufacturing Africa, Foreign Direct Investment</div>
+        <div class="sub">Economic development programme funded by the UK Foreign, Commonwealth and Development Office</div>
+        <ul>
+          <li>Audited in Python a cross-DFI database of 16,154 transactions by 14 development finance institutions, flagging 80 duplicate rows and 195 programme ceilings booked as deals; after treatment the recorded volume falls from USD 979bn to USD 501bn.</li>
+          <li>Found that of USD 14.0bn committed by 12 DFIs in the programme's six priority markets (2015–2025), banks and other financial firms received 47% and manufacturing 18%, with five firms taking three quarters of the manufacturing amount. Built an interactive dashboard of the flows.</li>
+          <li>Identified a small-ticket gap: only 4 of 44 DFI manufacturing deals were under USD 5m, against a median of USD 12m for the deals the programme closes. These figures are preliminary until 198 deals are recoded by hand.</li>
+          <li>Drafted the terms of reference for three deliverables: an investor map testing each DFI's deals against its mandate, a screen of manufacturing subsectors by export competitiveness, and a tool matching the programme's deals to the DFIs likely to fund them.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when"><b>May – Oct 2026</b>Rome</div>
+      <div>
         <h3>Junior Economist Intern</h3>
-        <div class="org">FAO Investment Centre (CFI) — East &amp; Southern Africa Service</div>
+        <div class="org">FAO Investment Centre, East and Southern Africa Service</div>
+        <div class="sub">EIB-FAO Partnership and EU Global Gateway Initiative</div>
         <ul>
-          <li>Authored the Investment Centre's toolkit for assessing value-chain competitiveness along three EU Global Gateway corridors — Lobito, TAZARA and Nacala — published in FAO's Knowledge for Investment series and written to be used by teams appraising agricultural investments.</li>
-          <li>Helped design an EIB-funded technical assistance programme for the Somali Development and Reconstruction Bank, testing whether its lending practices, environmental and social risk procedures and institutional capacity could absorb EIB credit lines for agribusiness.</li>
-          <li>Screened the bank's loan portfolio against EIB climate (CAES) and gender-finance criteria, identifying which exposures already qualified and which capacity gaps were blocking allocation, monitoring and reporting.</li>
-          <li>Wrote the access-to-finance and gender-inclusion chapters of the final Somalia report, recommending specific interventions on smallholder financing, female borrower outreach and climate-resilient upgrading.</li>
+          <li>Assessed the credit process, environmental and social risk management and absorption capacity of the Somali Development and Reconstruction Bank, set to on-lend EIB credit to agricultural SMEs, as the basis for an EIB-funded technical assistance programme.</li>
+          <li>Screened the bank's loan portfolio against the EIB's Climate Action and Environmental Sustainability and Financing for Gender Equality criteria, and drafted the report's sections on SME finance and gender.</li>
+          <li>Drafted parts of an agrifood investment screening toolkit for the EU Knowledge for Investment facility, now in FAO clearance. Applied along the Lobito Corridor (Angola, Zambia, DRC), it shortlisted three priority value chains.</li>
+          <li>Assessed financing mechanisms and institutional arrangements supporting agribusiness investment in Rwanda, identifying lessons relevant to Sierra Leone, including approaches involving financial institutions, risk-sharing instruments, investment funds and value-chain finance.</li>
         </ul>
-      </article>
+      </div>
+    </div>
 
-      <article class="job reveal">
-        <div class="when">Mar – May 2026 · Paris</div>
-        <h3>Research Intern</h3>
-        <div class="org">Hospinnomics Chair, Paris School of Economics — ANR RESISTE</div>
+    <div class="entry">
+      <div class="when"><b>Mar – Aug 2026</b>Paris</div>
+      <div>
+        <h3>Research Assistant</h3>
+        <div class="org">Paris School of Economics, Hospinnomics Chair</div>
+        <div class="sub">ANR RESISTE project on financial incentives for cervical cancer screening</div>
         <ul>
-          <li>Ran the methodological review that set the design of the project's discrete choice experiment — which attributes to test, which models would hold, and how large a sample the results would need to be credible.</li>
-          <li>Built the methodological case for how the project measures a society's tolerance for health inequality, comparing what tax schedules reveal about that tolerance against what surveys and lottery experiments elicit directly.</li>
-          <li>Assessed four French administrative microdata sources (ERFS, FiLoSoFi, DADS, INSEE national accounts) on my own initiative and wrote the feasibility memos that determined which could actually support the project's income-distribution modelling.</li>
-          <li>Contributed to the survey instrument itself, from questionnaire development through attribute-level specification.</li>
+          <li>Appraised three French administrative microdatasets (ERFS, FiLoSoFi, DADS) against a specified estimation and wrote the feasibility memos that set the project's estimation route.</li>
+          <li>Co-designed the project's discrete choice experiment on public preferences over health-care prioritisation, and am co-authoring a working paper from it.</li>
         </ul>
-      </article>
+      </div>
+    </div>
 
-      <article class="job reveal">
-        <div class="when">Nov 2025 – Feb 2026 · Paris</div>
-        <h3>Green Finance Challenge</h3>
+    <div class="entry">
+      <div class="when"><b>Nov 2025 – Feb 2026</b>Paris</div>
+      <div>
+        <h3>Green Finance Challenge, Sciences Po consulting project</h3>
         <div class="org">HSBC Continental Europe</div>
         <ul>
-          <li>Co-authored a benchmarking report on the EU climate-tech ecosystem, tracing how industrial strategy and regulation — the Green Deal, CSRD, the Net Zero Industry Act — decide where cross-border venture capital actually lands.</li>
-          <li>Assessed how InvestEU, the Innovation Fund and the EIB/EIF use blended finance to de-risk first-of-a-kind industrial projects, and where that machinery falls short.</li>
+          <li>Co-authored a 70-page report for HSBC benchmarking the EU climate-tech sector: the regulatory framework, EU financing schemes such as InvestEU, the Innovation Fund and EIB and EIF blended finance, the start-up and venture capital market, and how other banks support climate-tech firms.</li>
         </ul>
-      </article>
+        <div class="links">
+          <a href="reports/HSBC-Green-Finance-Challenge-EU-Climate-Tech-2026.pdf" target="_blank" rel="noopener">Read the report (PDF)</a>
+          <a href="https://www.sciencespo.fr/chair-sustainable-development/news/fostering-future-green-finance-look-back-green-finance-challenge-2025-hsbc-continental-europe/" target="_blank" rel="noopener">Sciences Po summary</a>
+        </div>
+      </div>
+    </div>
 
-      <article class="job reveal">
-        <div class="when">Oct 2025 · Paris</div>
-        <h3>Climate Hackathon</h3>
-        <div class="org">European Investment Bank (EIB)</div>
+    <div class="entry">
+      <div class="when"><b>Oct 2025</b>Paris</div>
+      <div>
+        <h3>Climate Survey Hackathon</h3>
+        <div class="org">European Investment Bank</div>
         <ul>
-          <li>Cleaned, harmonised and analysed the 2023 EIB Climate Survey in R — 19,067 respondents across all 27 EU Member States — under hackathon time pressure.</li>
-          <li>Designed a dual identification strategy (country-level OLS alongside individual-level weighted regression with country fixed effects), defended the findings in front of senior EIB economists, and published them as a co-authored analytical report.</li>
+          <li>In a five-person team, cleaned and weighted the 2023 EIB Climate Survey (19,067 respondents, 27 EU Member States), presented the findings to senior EIB experts and co-authored the analytical report the Bank published.</li>
         </ul>
-      </article>
+        <div class="links">
+          <a href="https://www.eib.org/files/documents/climate-hackathon-analytical-report-group-1.pdf" target="_blank" rel="noopener">Read the report (PDF, eib.org)</a>
+        </div>
+      </div>
+    </div>
 
-      <article class="job reveal">
-        <div class="when">Jun – Sep 2024 · Rome</div>
+    <div class="entry">
+      <div class="when"><b>Jun – Sep 2024</b>Rome</div>
+      <div>
         <h3>Research Intern</h3>
-        <div class="org">National Institute for Public Policy Analysis (INAPP)</div>
+        <div class="org">INAPP, National Institute for Public Policy Analysis</div>
         <ul>
-          <li>Analysed 500+ collective labour agreements to inform national reform on wage indexation and income protection — the concrete end of the good-jobs debate.</li>
-          <li>Built the reproducible workflows behind findings that fed <em>Rapporto INAPP 2024</em>, Italy's flagship annual publication on labour-market policy.</li>
-        </ul>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- WORK / PUBLICATIONS -->
-<section id="work">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">03</span><h2>Selected work &amp; publications</h2></div>
-    <div class="works">
-
-      <article class="card reveal">
-        <span class="tag pub">Published · 2025</span>
-        <h3>Media environment and climate knowledge as drivers of public support for green investment in Europe</h3>
-        <p>Analytical report from the EIB Climate Survey Hackathon, co-organised with the European Chair for Sustainable Development and Climate Transition.</p>
-        <span class="meta">Antunes, Blanquet, Gillesberger, Zatti &amp; Zhou — EIB</span>
-        <a class="read" href="https://www.eib.org/files/documents/climate-hackathon-analytical-report-group-1.pdf" target="_blank" rel="noopener">Read the report →</a>
-      </article>
-
-      <article class="card reveal">
-        <span class="tag">Working paper</span>
-        <h3>Social preferences for solidarity in health: an empirical test of implicit theories of distributive justice in France</h3>
-        <p>A discrete choice experiment on public preferences over health-care prioritisation, testing competing theories of distributive justice. In preparation for peer review.</p>
-        <span class="meta">Co-authored · ANR RESISTE · PSE</span>
-      </article>
-
-      <article class="card reveal">
-        <span class="tag">In progress</span>
-        <h3>Value-chain competitiveness along the EU Global Gateway corridors</h3>
-        <p>Methodological note covering the Lobito, TAZARA and Nacala corridors, framing competitiveness analysis for agricultural investment.</p>
-        <span class="meta">FAO Investment Centre · 2026</span>
-      </article>
-
-      <article class="card reveal">
-        <span class="tag">Research note</span>
-        <h3>Estimating the Atkinson inequality aversion parameter for France</h3>
-        <p>Connecting discrete-choice methodology to distributional welfare economics, using French administrative microdata for parametric index estimation.</p>
-        <span class="meta">Hospinnomics · PSE</span>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- LEADERSHIP & TRAINING -->
-<section id="leadership">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">04</span><h2>Leadership &amp; training</h2></div>
-    <div class="lead-grid">
-
-      <div class="reveal">
-        <h3>Leadership</h3>
-
-        <div class="role">
-          <div class="rtop">
-            <h4>Representative</h4>
-            <span class="yrs">2017 – 2025</span>
-          </div>
-          <div class="org2">CISV International (UNESCO-affiliated)</div>
-          <p>Over seven years with the organisation. Led a 40-member youth team from 2021 to 2022, coordinating programmes and campaigns across chapters.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop">
-            <h4>Delegate, policy forums</h4>
-          </div>
-          <div class="org2">EUI State of the Union (May 2024) · OECD World Forum on Well-being</div>
-          <p>Selected to represent at two international policy convenings — one on European governance, one on measuring what actually counts as progress.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop">
-            <h4>Volunteer</h4>
-            <span class="yrs">2023</span>
-          </div>
-          <div class="org2">European Solidarity Corps — Germany</div>
-          <p>Infrastructure restoration and digital resilience project.</p>
-        </div>
-
-        <div class="role">
-          <div class="rtop">
-            <h4>Student representative</h4>
-          </div>
-          <div class="org2">Association de l'École d'Affaires Publiques, Sciences Po</div>
-        </div>
-      </div>
-
-      <div class="reveal">
-        <h3>Specialised training</h3>
-        <ul class="certs">
-          <li>
-            <div class="ct"><b>Investment Project Formulation &amp; Management</b><span>FAO · 2026</span></div>
-            <div class="cw">Full project cycle for IFI-financed agricultural investment — identification through appraisal, financial and economic analysis, supervision. Aligned to FAO-EIB and FAO-World Bank operational practice.</div>
-          </li>
-          <li>
-            <div class="ct"><b>Partnerships with the EU: Agreement Templates</b><span>FAO · 2026</span></div>
-          </li>
-          <li>
-            <div class="ct"><b>Data for Public Policy and Social Choices</b><span>Bologna · 2025</span></div>
-            <div class="cw">Applied empirical microeconomics and causal inference (DiD, synthetic control, ML) for policy impact evaluation.</div>
-          </li>
-          <li>
-            <div class="ct"><b>Human Health and Climate Change</b><span>UN &amp; WHO · 2025</span></div>
-            <div class="cw">Specialised module on climate impacts for global health, and on evaluating mitigation and adaptation policy.</div>
-          </li>
-          <li>
-            <div class="ct"><b>InnovAction in Health Care</b><span>Sant'Anna Pisa · 2025</span></div>
-            <div class="cw">Strategy, performance and data management in health systems.</div>
-          </li>
-          <li>
-            <div class="ct"><b>EU climate policy &amp; digital business strategy</b><span>H-FARM · 2024</span></div>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- METHODS -->
-<section id="methods">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">05</span><h2>Methods &amp; tools</h2></div>
-    <div class="meth-grid">
-      <div class="meth reveal">
-        <h3>Research methods</h3>
-        <div class="chips">
-          <span class="chip">Causal inference</span>
-          <span class="chip">DiD</span>
-          <span class="chip">RDD</span>
-          <span class="chip">Synthetic control</span>
-          <span class="chip">Matching</span>
-          <span class="chip">IV</span>
-          <span class="chip">DCE / conjoint</span>
-          <span class="chip">Stated preference</span>
-          <span class="chip">Welfare estimation</span>
-          <span class="chip">Value-chain analysis</span>
-          <span class="chip">E&amp;S risk screening</span>
-          <span class="chip">Project cycle mgmt</span>
-        </div>
-      </div>
-      <div class="meth reveal">
-        <h3>Technical</h3>
-        <div class="chips">
-          <span class="chip">R · Tidyverse</span>
-          <span class="chip">ggplot2 · Quarto</span>
-          <span class="chip">Stata</span>
-          <span class="chip">Python · pandas</span>
-          <span class="chip">LaTeX</span>
-          <span class="chip">Excel</span>
-          <span class="chip">Microsoft Office</span>
-          <span class="chip">LLM-assisted analysis</span>
-        </div>
-        <p style="margin-top:18px">Data cleaning, statistical analysis, visualisation and reproducible analytical workflows.</p>
-        <p style="margin-top:12px"><b>Writing:</b> briefing notes, short-form analytical reports, literature reviews and feasibility memos.</p>
-      </div>
-      <div class="meth reveal">
-        <h3>Languages</h3>
-        <ul class="langs">
-          <li><span>Italian</span><b>Native</b></li>
-          <li><span>English</span><b>IELTS 8.0</b></li>
-          <li><span>French</span><b>C1</b></li>
-          <li><span>Spanish</span><b>B1</b></li>
+          <li>Coded indexation and income protection clauses across 500+ Italian collective bargaining agreements into a comparable dataset for <em>Rapporto INAPP 2024</em>, Italy's annual labour market policy report.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<section id="reports">
+  <div class="wrap">
+    <h2>Reports and publications</h2>
+    <ul class="reports">
+      <li>
+        <div>
+          <h3>Media environment and climate knowledge as drivers of public support for green investment in Europe</h3>
+          <p class="by">Antunes, Blanquet, Gillesberger, Zatti and Zhou. Analytical report, European Investment Bank, 2025.</p>
+        </div>
+        <span class="status">Published</span>
+        <div class="links"><a href="https://www.eib.org/files/documents/climate-hackathon-analytical-report-group-1.pdf" target="_blank" rel="noopener">Read on eib.org (PDF)</a></div>
+      </li>
+      <li>
+        <div>
+          <h3>EU Climate Tech: benchmarking the competitive and regulatory environment of climate-tech start-ups and venture capital funds in the European Union</h3>
+          <p class="by">Hecht Wulff, Lorain, Nogues, Orrego Martinez, Pareschi, Renault-Mercier, Thomson and Zatti. Report for HSBC Continental Europe, Green Finance Challenge, Paris, February 2026.</p>
+        </div>
+        <span class="status">Report</span>
+        <div class="links"><a href="reports/HSBC-Green-Finance-Challenge-EU-Climate-Tech-2026.pdf" target="_blank" rel="noopener">Read the report (PDF)</a></div>
+      </li>
+      <li>
+        <div>
+          <h3>Social preferences for solidarity in health: an empirical test of implicit theories of distributive justice in France</h3>
+          <p class="by">Co-authored working paper, ANR RESISTE project, Hospinnomics Chair, Paris School of Economics.</p>
+        </div>
+        <span class="status">In preparation</span>
+      </li>
+      <li>
+        <div>
+          <h3>Agrifood investment screening toolkit for EU Global Gateway corridors</h3>
+          <p class="by">Contributing author. FAO Investment Centre, Knowledge for Investment, 2026.</p>
+        </div>
+        <span class="status">In FAO clearance</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education and training</h2>
+
+    <div class="entry">
+      <div class="when"><b>Sep 2025 – Jul 2027</b>London and Paris</div>
+      <div>
+        <h3>Dual master's degree, London School of Economics and Sciences Po</h3>
+        <div class="org">MPA in Economic Policy (LSE) and Master in Public Policy (Sciences Po)</div>
+        <ul>
+          <li>LSE: Sustainable Finance and Impact Investing; Managerial Finance; Advanced Empirical Methods; Trade Policy and Development; Globalisation and Economic Policy; Economic Analysis, Narrative Development, and Political Feasibility.</li>
+          <li>Sciences Po: Policy Analysis and Policy Evaluation, Advanced; Public Economics; European Law; Health Economics, Law and Advocacy.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when"><b>Sep 2022 – Jul 2025</b>Bologna</div>
+      <div>
+        <h3>BSc in Economics, Politics and Social Sciences, University of Bologna</h3>
+        <div class="org">110/110 cum laude, GPA 29/30, taught in English</div>
+        <ul>
+          <li>Econometrics; Data Science; Mathematics; Micro, Macro, International, Political and Public Economics; Political Behavior.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cols" style="margin-top:34px">
+      <div>
+        <h3>Training</h3>
+        <ul class="plain">
+          <li><span>Investment Project Formulation and Management</span><span>FAO, 2026</span></li>
+          <li><span>Partnerships with the EU: Agreement Templates</span><span>FAO, 2026</span></li>
+          <li><span>Data for Public Policy and Social Choices</span><span>Bologna, 2025</span></li>
+          <li><span>Human Health and Climate Change</span><span>UN and WHO, 2025</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Summer schools</h3>
+        <ul class="plain">
+          <li><span>InnovAction in Health Care: Strategy, Performance and Data Management in Health Systems</span><span>Sant'Anna, Pisa, 2025</span></li>
+          <li><span>Agritech and EU climate policy</span><span>H-FARM, Roncade, 2024</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills, languages and volunteering</h2>
+    <div class="cols">
+      <div>
+        <h3>Tools</h3>
+        <ul class="plain">
+          <li><span>Python (pandas, matplotlib)</span><span>Data audit, analysis</span></li>
+          <li><span>R (tidyverse, Quarto) and Stata</span><span>Econometrics</span></li>
+          <li><span>SQL and Excel</span><span>Data, models</span></li>
+          <li><span>LaTeX and PowerPoint</span><span>Reports, decks</span></li>
+        </ul>
+        <h3 style="margin-top:30px">Languages</h3>
+        <ul class="plain">
+          <li><span>Italian</span><span>Native</span></li>
+          <li><span>English</span><span>IELTS 8.0</span></li>
+          <li><span>French</span><span>B2</span></li>
+          <li><span>Spanish</span><span>B1</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Volunteering and leadership</h3>
+        <ul class="plain">
+          <li><span>CISV International (UNESCO-affiliated), volunteer and representative; led a 40-member youth team in 2021–22</span><span>2017–2025</span></li>
+          <li><span>European Solidarity Corps, infrastructure restoration project, Germany</span><span>2023</span></li>
+          <li><span>Delegate, EUI State of the Union (2024) and OECD World Forum on Well-being</span><span>Policy forums</span></li>
+          <li><span>Elected representative, Association de l'École d'Affaires Publiques</span><span>Sciences Po</span></li>
+        </ul>
+        <p class="note">Outside work: opinion writer for <em>Scomodo</em>, national-level water polo with Roma Vis Nova, and cello in the Santa Cecilia youth orchestra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact">
   <div class="wrap">
-    <span class="eyebrow reveal">Get in touch</span>
-    <h2 class="reveal">Let's talk about <em>development finance</em>, data, and good policy.</h2>
-    <div class="clinks reveal">
-      <a class="clink" href="mailto:cosimo.zatti@gmail.com"><span class="dot"></span>cosimo.zatti@gmail.com</a>
-      <a class="clink" href="https://www.linkedin.com/in/cosimo-zatti-102ba32b3/" target="_blank" rel="noopener"><span class="dot"></span>LinkedIn</a>
-      <a class="clink" href="https://github.com/cosimozatti" target="_blank" rel="noopener"><span class="dot"></span>GitHub</a>
-      <a class="clink" href="CV-Cosimo-Zatti.pdf" target="_blank" rel="noopener"><span class="dot"></span>Download CV (PDF)</a>
+    <h2>Contact</h2>
+    <p>Write to me about development finance roles, research or project work.</p>
+    <div class="actions">
+      <a class="btn solid" href="mailto:cosimo.zatti@gmail.com">cosimo.zatti@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/cosimo-zatti-102ba32b3/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/cosimozatti" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn ghost" href="CV-Cosimo-Zatti.pdf" target="_blank" rel="noopener">CV (PDF)</a>
     </div>
   </div>
 </section>
-
-<footer>
-  <div class="wrap">
-    <span>© 2026 Cosimo Zatti</span>
-    <span>Built as a single page · Rome / London</span>
-  </div>
-</footer>
-
-<script>
-  const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-</script>
+</main>
+<footer><div class="wrap">© 2026 Cosimo Zatti. London.</div></footer>
 </body>
 </html>
